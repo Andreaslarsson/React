@@ -1,21 +1,21 @@
 import "./App.css";
+import { Image, Table, Form } from "./components";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav
+        style={{
+          borderBottom: "solid 4px",
+          paddingBottom: "2rem",
+        }}
+      >
+        <Link to="/home">Home</Link> | <Link to="/about">About</Link>
+      </nav>
+      <Form formTitle={"title"} />
+      <Image />
+      <Table />
     </div>
   );
 }
